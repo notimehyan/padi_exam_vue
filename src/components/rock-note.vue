@@ -1,6 +1,6 @@
 <template>
-  <div class="padi-header">
-    我是头
+  <div class="padi-note">
+    dsadasdsadasdsadsadasdsad公告区dasdadsadsadsadasdasd
   </div>
 </template>
 

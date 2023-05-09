@@ -1,12 +1,14 @@
 <template>
-  <div class="padi-header">
-    我是头
+  <div class="padi-footer">
+    jidoasdjioadjioa
   </div>
 </template>
 
 <script>
 export default {
- 
+  
+
+
 };
 </script>
 
