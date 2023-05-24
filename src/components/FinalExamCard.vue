@@ -5,13 +5,9 @@
         <div class="fecTittle">
           <div class="fecTittle_left">
             <span
-              >姓名 (请以正楷填写) ______________________________________ 日期
-              ______________________________</span
-            >
+              >姓名 (请以正楷填写) ______________________________________ 日期______________________________</span>
             <h2>开放水域潜水员课程期末考试答题纸</h2>
-            <span
-              >说明:在您选好答案后,请将对应字母的方框涂满.如果填错了,请将选错的答案擦掉,或在选错的答案上打X.</span
-            >
+            <span>说明:在您选好答案后,请将对应字母的方框涂满.如果填错了,请将选错的答案擦掉,或在选错的答案上打X.</span>
           </div>
 
           <div class="fecTittle_right">
@@ -464,11 +460,22 @@
 
 <script>
 export default {
+ data(){
+
+ },
+ methods:{
+    active(){
+      
+    }
+ }
 
 }
 </script>
 
 <style>
+ul li {
+  list-style: none;
+}
 .FinalExamCard{
     width: 940px;
     height: 1300px;
