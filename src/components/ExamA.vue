@@ -76,7 +76,7 @@
                 </span>
                 <span class="timu">
                   <span class="fangkuang"></span>
-                  <span>D 向潜伴比手势,上升到水面,然后重新下潜.</span>
+                  <span>2</span>
                 </span>
               </li>
               <li>
