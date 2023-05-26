@@ -3,10 +3,10 @@
     <!-- <RockHeader></RockHeader>
     <RockMain v-show="isShow"></RockMain>
     <RockFooter></RockFooter>
-    <button @click="isShow = !isShow">显示隐藏</button>
+    <button @click="isShow = !isShow">显示隐藏</button> -->
 
-    <ExamA></ExamA>
-    <ExamB></ExamB>
+    <!-- <ExamA></ExamA> -->
+    <!-- <ExamB></ExamB>
     <SecurityPractices></SecurityPractices>
     <DiverStatement></DiverStatement>
     <DiverDisclaimers></DiverDisclaimers>

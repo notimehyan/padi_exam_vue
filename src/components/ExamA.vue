@@ -61,10 +61,7 @@
                 >
                 <span class="timu">
                   <span class="fangkuang"></span>
-                  <span
-                    >A
-                    减慢下潜速率,以手势示意我的潜伴也慢下来,然后更用力地平衡压力.</span
-                  >
+                  <span>A减慢下潜速率,以手势示意我的潜伴也慢下来,然后更用力地平衡压力.</span>
                 </span>
                 <span class="timu">
                   <span class="fangkuang"></span>
