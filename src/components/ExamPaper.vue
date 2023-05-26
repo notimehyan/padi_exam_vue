@@ -1,12 +1,12 @@
 <template>
   <div class="ExamPaper_body">
     <div v-for="(examList, k) in examList" :key="examList">
-      <div v-if="index === k ">
+      <div v-if="index === k">
         <p class="ExamPaper_title01">{{ titleName }}</p>
         <p class="ExamPaper_title02">{{ examList.title }}</p>
         <div class="ExamPaper_Answers">
           <ul>
-            <li v-for="e in examList.answer" :key="e" @click="useChoose">{{ e }}</li>
+            <li v-for="e in examList.answer" :key="e" @click="useChoose"> {{ e }} </li>
           </ul>
         </div>
       </div>
@@ -15,8 +15,8 @@
     <div class="UserChooseView">你选择答案</div>
 
     <div class="ExamPaper_Button">
-      <button class="back" @click="back">[检查]上一题</button>
-      <button class="next" @click="next">[确认]下一题</button>
+      <button :disabled="index === 0" class="back" @click="back">[检查]上一题</button>
+      <button :disabled="index === 16" class="next" @click="next">[确认]下一题</button>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       index: 0,
-      titleName:"随堂测验1",
+      titleName: "随堂测验1",
       examList: [
         {
           id: 100,
@@ -88,11 +88,9 @@ export default {
         },
         {
           id: 106,
-          title: "7. 没有遵守水肺潜水最重要的规则可能会导致严重的肺部过度扩张(肺破裂)伤害,进而可能导致瘫痪和死亡.",
-          answer: [
-            "A 正确.",
-            "B 错误.",
-          ],
+          title:
+            "7. 没有遵守水肺潜水最重要的规则可能会导致严重的肺部过度扩张(肺破裂)伤害,进而可能导致瘫痪和死亡.",
+          answer: ["A 正确.", "B 错误."],
         },
         {
           id: 107,
@@ -105,16 +103,14 @@ export default {
         },
         {
           id: 108,
-          title: "9. 我的潜伴和我计划要潜入18公尺/60英尺的深度,在其他情况不变下,我们应该要预期空气供给时间会比在10公尺/33英尺时______",
-          answer: [
-            "A 更长.",
-            "B 更短.",
-            "C 一样.",
-          ],
+          title:
+            "9. 我的潜伴和我计划要潜入18公尺/60英尺的深度,在其他情况不变下,我们应该要预期空气供给时间会比在10公尺/33英尺时______",
+          answer: ["A 更长.", "B 更短.", "C 一样."],
         },
         {
           id: 109,
-          title: "10. 在潜水时,我为了跟随我感兴趣的鱼而奋力游泳,但很快就感觉我无法呼吸到足够的空气,此时正确的行为是:",
+          title:
+            "10. 在潜水时,我为了跟随我感兴趣的鱼而奋力游泳,但很快就感觉我无法呼吸到足够的空气,此时正确的行为是:",
           answer: [
             "A 向潜伴比手势,然后回到水面上.",
             "B 使用调节器排气钮来增加空气流量.",
@@ -124,19 +120,12 @@ export default {
         {
           id: 110,
           title: "11. 一个在淡水中呈现中性浮力的物体,在海水中会_______?",
-          answer: [
-            "A 沉下去",
-            "B 浮起来.",
-            "C 是中性浮力.",
-          ],
+          answer: ["A 沉下去", "B 浮起来.", "C 是中性浮力."],
         },
         {
           id: 111,
           title: "12. 潜伴制度的三个主要好处是实用性,安全性和乐趣.",
-          answer: [
-            "A 正确.",
-            "B 错误.",
-          ],
+          answer: ["A 正确.", "B 错误."],
         },
         {
           id: 112,
@@ -151,16 +140,12 @@ export default {
         {
           id: 113,
           title: "14. 选择任何水肺潜水装备时的主要考量为_____.",
-          answer: [
-            "A 适合.",
-            "B 品牌.",
-            "C 合身.",
-            "D 舒适.",
-          ],
+          answer: ["A 适合.", "B 品牌.", "C 合身.", "D 舒适."],
         },
         {
           id: 114,
-          title: "15. 我正在计划下周的潜水并且检查我的装备,我将装备组装好之后,发现我的调节器呼吸起来比印象中困难,此时适当的行为是:",
+          title:
+            "15. 我正在计划下周的潜水并且检查我的装备,我将装备组装好之后,发现我的调节器呼吸起来比印象中困难,此时适当的行为是:",
           answer: [
             "A 在使用前让专业人士进行检查和保养.",
             "B 不管它继续用,但限制我的潜水深度为10公尺 / 33英尺.",
@@ -170,25 +155,20 @@ export default {
         {
           id: 115,
           title: "16. 你无法在yoke气瓶阀上使用DIN调节器.",
-          answer: [
-            "A 正确.",
-            "B 错误.",
-          ],
+          answer: ["A 正确.", "B 错误."],
         },
         {
           id: 116,
-          title: "17. 熟练浮力控制技巧非常重要,因为它能让我控制下潜,上浮或是维持中性浮力,我在潜水时经常需要调整浮力.",
-          answer: [
-            "A 正确.",
-            "B 错误.",
-          ],
+          title:
+            "17. 熟练浮力控制技巧非常重要,因为它能让我控制下潜,上浮或是维持中性浮力,我在潜水时经常需要调整浮力.",
+          answer: ["A 正确.", "B 错误."],
         },
       ],
     };
   },
   methods: {
     useChoose() {
-      console.log("23232");
+      console.log('1121212');
     },
     back() {
       this.index--;
@@ -218,32 +198,33 @@ export default {
   height: 40px;
   line-height: 40px;
   font-size: 30px;
-  text-align: right;
+  text-align: center;
   margin-right: 15px;
 }
 .ExamPaper_title02 {
-  height: 200px;
-  font-size: 20px;
-  line-height: 60px;
+  height: 100px;
+  font-size: 25px;
+  line-height: 50px;
   margin-left: 30px;
 }
 
 .ExamPaper_Answers {
   height: 550px;
-  background: #fcb2b2;
+  /* background: #fcb2b2; */
 }
 .ExamPaper_Answers ul {
-  padding-top: 30px;
+  margin-top: 50px;
 }
 
 .ExamPaper_Answers li {
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
   margin-left: 40px;
+  font-size: 24px;
 }
 
 .UserChooseView {
-  background-color: aqua;
+  /* background-color: aqua; */
   height: 80px;
 }
 
@@ -256,6 +237,7 @@ export default {
 
 .back,
 .next {
+  border-radius: 20px;
   width: 300px;
   height: 80px;
   font-size: 25px;
