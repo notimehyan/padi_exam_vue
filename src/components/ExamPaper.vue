@@ -1,7 +1,7 @@
 <template>
   <div class="ExamPaper_body">
     <div v-for="(examList, k) in examList" :key="examList">
-      <div v-if="index === k">
+      <div v-if="index === k ">
         <p class="ExamPaper_title01">{{ titleName }}</p>
         <p class="ExamPaper_title02">{{ examList.title }}</p>
         <div class="ExamPaper_Answers">
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="UserChooseView">你选择答案:{{item}}</div>
+    <div class="UserChooseView">你选择答案</div>
 
     <div class="ExamPaper_Button">
       <button class="back" @click="back">[检查]上一题</button>
@@ -188,7 +188,7 @@ export default {
   },
   methods: {
     useChoose() {
-      console.log("已选");
+      console.log("23232");
     },
     back() {
       this.index--;
