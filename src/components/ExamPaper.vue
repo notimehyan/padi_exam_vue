@@ -6,7 +6,11 @@
         <p class="ExamPaper_title02">{{ examList.title }}</p>
         <div class="ExamPaper_Answers">
           <ul>
-            <li v-for="e in examList.answer" :key="e" @click="useChoose"> {{ e }} </li>
+            <li v-for="e in examList.answer" :key="e" >
+              <a :class="{ active: index === activeIndex }" @click="useChoose" href="#">
+                {{ e }}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -15,8 +19,12 @@
     <div class="UserChooseView">你选择答案</div>
 
     <div class="ExamPaper_Button">
-      <button :disabled="index === 0" class="back" @click="back">[检查]上一题</button>
-      <button :disabled="index === 16" class="next" @click="next">[确认]下一题</button>
+      <button :disabled="index === 0" class="back" @click="back">
+        [检查]上一题
+      </button>
+      <button :disabled="index === 16" class="next" @click="next">
+        [确认]下一题
+      </button>
     </div>
   </div>
 </template>
@@ -25,6 +33,7 @@
 export default {
   data() {
     return {
+      activeIndex: 0,
       index: 0,
       titleName: "随堂测验1",
       examList: [
@@ -168,7 +177,8 @@ export default {
   },
   methods: {
     useChoose() {
-      console.log('1121212');
+      this.activeIndex = this.index;
+      
     },
     back() {
       this.index--;
@@ -186,6 +196,12 @@ export default {
   padding: 0;
   list-style: none;
 }
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 .ExamPaper_body {
   height: 1000px;
   width: 800px;
@@ -200,6 +216,7 @@ export default {
   font-size: 30px;
   text-align: center;
   margin-right: 15px;
+  margin-top: 30px;
 }
 .ExamPaper_title02 {
   height: 100px;
@@ -221,6 +238,10 @@ export default {
   line-height: 100px;
   margin-left: 40px;
   font-size: 24px;
+}
+
+.active {
+  background-color: skyblue;
 }
 
 .UserChooseView {
